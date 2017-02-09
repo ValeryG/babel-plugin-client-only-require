@@ -1,0 +1,22 @@
+{
+  "name": "@concur/babel-plugin-client-only-require",
+  "version": "1.0.0",
+  "description": "wrap requires of certant extensions into client only condition",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.concur.com:nui/babel-plugin-client-only-require.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "asset-require-hook": "^1.0.2",
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0"
+  }
+}
