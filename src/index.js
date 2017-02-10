@@ -40,13 +40,14 @@ export default function transformAssets({types: t}) {
                 if (currentConfig.extensions.find(ext => args[0].value.endsWith(ext))) {
                     const [
                         {
-                            value : filePath
+                            value : filePath,
+                            clientOnlyRequire
                         }
                     ] = args;
 
-                    const from = resolveModulePath(file.opts.filename);
-
-                    console.log("HERE?", from, filePath);
+                    if (clientOnlyRequire) {
+                        return;
+                    }
 
                     path.replaceWith(t.IfStatement(
                         {
@@ -166,7 +167,8 @@ export default function transformAssets({types: t}) {
                                     "arguments": [
                                         {
                                             "type": "StringLiteral",
-                                            "value": filePath+'qqq'
+                                            "value": filePath,
+                                            clientOnlyRequire: true
                                         }
                                     ]
                                 }
