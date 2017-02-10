@@ -1,19 +1,6 @@
 import {dirname, isAbsolute, resolve} from 'path';
 
 export default function transformAssets({types: t}) {
-    function resolveModulePath(filename) {
-        const dir = dirname(filename);
-
-        if (isAbsolute(dir)) {
-            return dir;
-        }
-
-        if (process.env.PWD) {
-            return resolve(process.env.PWD, dir);
-        }
-
-        return resolve(dir);
-    }
 
     return {
         visitor: {
