@@ -37,366 +37,292 @@ export default function transformAssets({types: t}) {
                     }
 
                     path.replaceWith(t.IfStatement(
-
                         {
-                            "type": "CallExpression",
-                            "start": 7,
-                            "end": 125,
-                            "loc": {
-                                "start": {
-                                    "line": 1,
-                                    "column": 7
-                                },
-                                "end": {
-                                    "line": 6,
-                                    "column": 4
-                                }
-                            },
-                            "callee": {
-                                "type": "FunctionExpression",
-                                "start": 8,
-                                "end": 122,
-                                "loc": {
-                                    "start": {
-                                        "line": 1,
-                                        "column": 8
-                                    },
-                                    "end": {
-                                        "line": 6,
-                                        "column": 1
-                                    }
-                                },
-                                "id": null,
-                                "generator": false,
-                                "expression": false,
-                                "async": false,
-                                "params": [],
-                                "body": {
-                                    "type": "BlockStatement",
-                                    "start": 19,
-                                    "end": 122,
-                                    "loc": {
-                                        "start": {
-                                            "line": 1,
-                                            "column": 19
-                                        },
-                                        "end": {
-                                            "line": 6,
-                                            "column": 1
-                                        }
-                                    },
-                                    "body": [
-                                        {
-                                            "type": "ReturnStatement",
-                                            "start": 21,
-                                            "end": 120,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 2,
-                                                    "column": 0
-                                                },
-                                                "end": {
-                                                    "line": 5,
-                                                    "column": 32
-                                                }
-                                            },
-                                            "argument": {
-                                                "type": "UnaryExpression",
-                                                "start": 28,
-                                                "end": 120,
-                                                "loc": {
-                                                    "start": {
-                                                        "line": 2,
-                                                        "column": 7
-                                                    },
-                                                    "end": {
-                                                        "line": 5,
-                                                        "column": 32
-                                                    }
-                                                },
-                                                "operator": "!",
-                                                "prefix": true,
-                                                "argument": {
-                                                    "type": "UnaryExpression",
-                                                    "start": 29,
-                                                    "end": 120,
-                                                    "loc": {
-                                                        "start": {
-                                                            "line": 2,
-                                                            "column": 8
-                                                        },
-                                                        "end": {
-                                                            "line": 5,
-                                                            "column": 32
-                                                        }
-                                                    },
-                                                    "operator": "!",
-                                                    "prefix": true,
-                                                    "argument": {
-                                                        "type": "LogicalExpression",
-                                                        "start": 34,
-                                                        "end": 119,
-                                                        "loc": {
-                                                            "start": {
-                                                                "line": 3,
-                                                                "column": 2
-                                                            },
-                                                            "end": {
-                                                                "line": 5,
-                                                                "column": 31
-                                                            }
-                                                        },
-                                                        "left": {
-                                                            "type": "LogicalExpression",
-                                                            "start": 34,
-                                                            "end": 84,
-                                                            "loc": {
-                                                                "start": {
-                                                                    "line": 3,
-                                                                    "column": 2
-                                                                },
-                                                                "end": {
-                                                                    "line": 4,
-                                                                    "column": 17
-                                                                }
-                                                            },
-                                                            "left": {
-                                                                "type": "BinaryExpression",
-                                                                "start": 34,
-                                                                "end": 63,
-                                                                "loc": {
-                                                                    "start": {
-                                                                        "line": 3,
-                                                                        "column": 2
-                                                                    },
-                                                                    "end": {
-                                                                        "line": 3,
-                                                                        "column": 31
-                                                                    }
-                                                                },
-                                                                "left": {
-                                                                    "type": "UnaryExpression",
-                                                                    "start": 34,
-                                                                    "end": 47,
-                                                                    "loc": {
-                                                                        "start": {
-                                                                            "line": 3,
-                                                                            "column": 2
-                                                                        },
-                                                                        "end": {
-                                                                            "line": 3,
-                                                                            "column": 15
-                                                                        }
-                                                                    },
-                                                                    "operator": "typeof",
-                                                                    "prefix": true,
-                                                                    "argument": {
-                                                                        "type": "Identifier",
-                                                                        "start": 41,
-                                                                        "end": 47,
-                                                                        "loc": {
-                                                                            "start": {
-                                                                                "line": 3,
-                                                                                "column": 9
-                                                                            },
-                                                                            "end": {
-                                                                                "line": 3,
-                                                                                "column": 15
-                                                                            },
-                                                                            "identifierName": "window"
-                                                                        },
-                                                                        "name": "window"
-                                                                    },
-                                                                    "extra": {
-                                                                        "parenthesizedArgument": false
-                                                                    }
-                                                                },
-                                                                "operator": "!==",
-                                                                "right": {
-                                                                    "type": "StringLiteral",
-                                                                    "start": 52,
-                                                                    "end": 63,
-                                                                    "loc": {
-                                                                        "start": {
-                                                                            "line": 3,
-                                                                            "column": 20
-                                                                        },
-                                                                        "end": {
-                                                                            "line": 3,
-                                                                            "column": 31
-                                                                        }
-                                                                    },
-                                                                    "extra": {
-                                                                        "rawValue": "undefined",
-                                                                        "raw": "'undefined'"
-                                                                    },
-                                                                    "value": "undefined"
-                                                                }
-                                                            },
-                                                            "operator": "&&",
-                                                            "right": {
-                                                                "type": "MemberExpression",
-                                                                "start": 69,
-                                                                "end": 84,
-                                                                "loc": {
-                                                                    "start": {
-                                                                        "line": 4,
-                                                                        "column": 2
-                                                                    },
-                                                                    "end": {
-                                                                        "line": 4,
-                                                                        "column": 17
-                                                                    }
-                                                                },
-                                                                "object": {
-                                                                    "type": "Identifier",
-                                                                    "start": 69,
-                                                                    "end": 75,
-                                                                    "loc": {
-                                                                        "start": {
-                                                                            "line": 4,
-                                                                            "column": 2
-                                                                        },
-                                                                        "end": {
-                                                                            "line": 4,
-                                                                            "column": 8
-                                                                        },
-                                                                        "identifierName": "window"
-                                                                    },
-                                                                    "name": "window"
-                                                                },
-                                                                "property": {
-                                                                    "type": "Identifier",
-                                                                    "start": 76,
-                                                                    "end": 84,
-                                                                    "loc": {
-                                                                        "start": {
-                                                                            "line": 4,
-                                                                            "column": 9
-                                                                        },
-                                                                        "end": {
-                                                                            "line": 4,
-                                                                            "column": 17
-                                                                        },
-                                                                        "identifierName": "document"
-                                                                    },
-                                                                    "name": "document"
-                                                                },
-                                                                "computed": false
-                                                            }
-                                                        },
-                                                        "operator": "&&",
-                                                        "right": {
-                                                            "type": "MemberExpression",
-                                                            "start": 90,
-                                                            "end": 119,
-                                                            "loc": {
-                                                                "start": {
-                                                                    "line": 5,
-                                                                    "column": 2
-                                                                },
-                                                                "end": {
-                                                                    "line": 5,
-                                                                    "column": 31
-                                                                }
-                                                            },
-                                                            "object": {
-                                                                "type": "MemberExpression",
-                                                                "start": 90,
-                                                                "end": 105,
-                                                                "loc": {
-                                                                    "start": {
-                                                                        "line": 5,
-                                                                        "column": 2
-                                                                    },
-                                                                    "end": {
-                                                                        "line": 5,
-                                                                        "column": 17
-                                                                    }
-                                                                },
-                                                                "object": {
-                                                                    "type": "Identifier",
-                                                                    "start": 90,
-                                                                    "end": 96,
-                                                                    "loc": {
-                                                                        "start": {
-                                                                            "line": 5,
-                                                                            "column": 2
-                                                                        },
-                                                                        "end": {
-                                                                            "line": 5,
-                                                                            "column": 8
-                                                                        },
-                                                                        "identifierName": "window"
-                                                                    },
-                                                                    "name": "window"
-                                                                },
-                                                                "property": {
-                                                                    "type": "Identifier",
-                                                                    "start": 97,
-                                                                    "end": 105,
-                                                                    "loc": {
-                                                                        "start": {
-                                                                            "line": 5,
-                                                                            "column": 9
-                                                                        },
-                                                                        "end": {
-                                                                            "line": 5,
-                                                                            "column": 17
-                                                                        },
-                                                                        "identifierName": "document"
-                                                                    },
-                                                                    "name": "document"
-                                                                },
-                                                                "computed": false
-                                                            },
-                                                            "property": {
-                                                                "type": "Identifier",
-                                                                "start": 106,
-                                                                "end": 119,
-                                                                "loc": {
-                                                                    "start": {
-                                                                        "line": 5,
-                                                                        "column": 18
-                                                                    },
-                                                                    "end": {
-                                                                        "line": 5,
-                                                                        "column": 31
-                                                                    },
-                                                                    "identifierName": "createElement"
-                                                                },
-                                                                "name": "createElement"
-                                                            },
-                                                            "computed": false
-                                                        },
-                                                        "extra": {
-                                                            "parenthesized": true,
-                                                            "parenStart": 30
-                                                        }
-                                                    },
-                                                    "extra": {
-                                                        "parenthesizedArgument": false
-                                                    }
-                                                },
-                                                "extra": {
-                                                    "parenthesizedArgument": false
-                                                }
-                                            }
-                                        }
-                                    ],
-                                    "directives": []
-                                },
-                                "extra": {
-                                    "parenthesized": true,
-                                    "parenStart": 7
-                                }
-                            },
-                            "arguments": []
-                        }
+                                 "type": "UnaryExpression",
+                                 "start": 4,
+                                 "end": 89,
+                                 "loc": {
+                                   "start": {
+                                     "line": 1,
+                                     "column": 4
+                                   },
+                                   "end": {
+                                     "line": 1,
+                                     "column": 89
+                                   }
+                                 },
+                                 "operator": "!",
+                                 "prefix": true,
+                                 "argument": {
+                                   "type": "UnaryExpression",
+                                   "start": 5,
+                                   "end": 89,
+                                   "loc": {
+                                     "start": {
+                                       "line": 1,
+                                       "column": 5
+                                     },
+                                     "end": {
+                                       "line": 1,
+                                       "column": 89
+                                     }
+                                   },
+                                   "operator": "!",
+                                   "prefix": true,
+                                   "argument": {
+                                     "type": "LogicalExpression",
+                                     "start": 7,
+                                     "end": 88,
+                                     "loc": {
+                                       "start": {
+                                         "line": 1,
+                                         "column": 7
+                                       },
+                                       "end": {
+                                         "line": 1,
+                                         "column": 88
+                                       }
+                                     },
+                                     "left": {
+                                       "type": "LogicalExpression",
+                                       "start": 7,
+                                       "end": 55,
+                                       "loc": {
+                                         "start": {
+                                           "line": 1,
+                                           "column": 7
+                                         },
+                                         "end": {
+                                           "line": 1,
+                                           "column": 55
+                                         }
+                                       },
+                                       "left": {
+                                         "type": "BinaryExpression",
+                                         "start": 7,
+                                         "end": 36,
+                                         "loc": {
+                                           "start": {
+                                             "line": 1,
+                                             "column": 7
+                                           },
+                                           "end": {
+                                             "line": 1,
+                                             "column": 36
+                                           }
+                                         },
+                                         "left": {
+                                           "type": "UnaryExpression",
+                                           "start": 7,
+                                           "end": 20,
+                                           "loc": {
+                                             "start": {
+                                               "line": 1,
+                                               "column": 7
+                                             },
+                                             "end": {
+                                               "line": 1,
+                                               "column": 20
+                                             }
+                                           },
+                                           "operator": "typeof",
+                                           "prefix": true,
+                                           "argument": {
+                                             "type": "Identifier",
+                                             "start": 14,
+                                             "end": 20,
+                                             "loc": {
+                                               "start": {
+                                                 "line": 1,
+                                                 "column": 14
+                                               },
+                                               "end": {
+                                                 "line": 1,
+                                                 "column": 20
+                                               },
+                                               "identifierName": "window"
+                                             },
+                                             "name": "window"
+                                           },
+                                           "extra": {
+                                             "parenthesizedArgument": false
+                                           }
+                                         },
+                                         "operator": "!==",
+                                         "right": {
+                                           "type": "StringLiteral",
+                                           "start": 25,
+                                           "end": 36,
+                                           "loc": {
+                                             "start": {
+                                               "line": 1,
+                                               "column": 25
+                                             },
+                                             "end": {
+                                               "line": 1,
+                                               "column": 36
+                                             }
+                                           },
+                                           "extra": {
+                                             "rawValue": "undefined",
+                                             "raw": "'undefined'"
+                                           },
+                                           "value": "undefined"
+                                         }
+                                       },
+                                       "operator": "&&",
+                                       "right": {
+                                         "type": "MemberExpression",
+                                         "start": 40,
+                                         "end": 55,
+                                         "loc": {
+                                           "start": {
+                                             "line": 1,
+                                             "column": 40
+                                           },
+                                           "end": {
+                                             "line": 1,
+                                             "column": 55
+                                           }
+                                         },
+                                         "object": {
+                                           "type": "Identifier",
+                                           "start": 40,
+                                           "end": 46,
+                                           "loc": {
+                                             "start": {
+                                               "line": 1,
+                                               "column": 40
+                                             },
+                                             "end": {
+                                               "line": 1,
+                                               "column": 46
+                                             },
+                                             "identifierName": "window"
+                                           },
+                                           "name": "window"
+                                         },
+                                         "property": {
+                                           "type": "Identifier",
+                                           "start": 47,
+                                           "end": 55,
+                                           "loc": {
+                                             "start": {
+                                               "line": 1,
+                                               "column": 47
+                                             },
+                                             "end": {
+                                               "line": 1,
+                                               "column": 55
+                                             },
+                                             "identifierName": "document"
+                                           },
+                                           "name": "document"
+                                         },
+                                         "computed": false
+                                       }
+                                     },
+                                     "operator": "&&",
+                                     "right": {
+                                       "type": "MemberExpression",
+                                       "start": 59,
+                                       "end": 88,
+                                       "loc": {
+                                         "start": {
+                                           "line": 1,
+                                           "column": 59
+                                         },
+                                         "end": {
+                                           "line": 1,
+                                           "column": 88
+                                         }
+                                       },
+                                       "object": {
+                                         "type": "MemberExpression",
+                                         "start": 59,
+                                         "end": 74,
+                                         "loc": {
+                                           "start": {
+                                             "line": 1,
+                                             "column": 59
+                                           },
+                                           "end": {
+                                             "line": 1,
+                                             "column": 74
+                                           }
+                                         },
+                                         "object": {
+                                           "type": "Identifier",
+                                           "start": 59,
+                                           "end": 65,
+                                           "loc": {
+                                             "start": {
+                                               "line": 1,
+                                               "column": 59
+                                             },
+                                             "end": {
+                                               "line": 1,
+                                               "column": 65
+                                             },
+                                             "identifierName": "window"
+                                           },
+                                           "name": "window"
+                                         },
+                                         "property": {
+                                           "type": "Identifier",
+                                           "start": 66,
+                                           "end": 74,
+                                           "loc": {
+                                             "start": {
+                                               "line": 1,
+                                               "column": 66
+                                             },
+                                             "end": {
+                                               "line": 1,
+                                               "column": 74
+                                             },
+                                             "identifierName": "document"
+                                           },
+                                           "name": "document"
+                                         },
+                                         "computed": false
+                                       },
+                                       "property": {
+                                         "type": "Identifier",
+                                         "start": 75,
+                                         "end": 88,
+                                         "loc": {
+                                           "start": {
+                                             "line": 1,
+                                             "column": 75
+                                           },
+                                           "end": {
+                                             "line": 1,
+                                             "column": 88
+                                           },
+                                           "identifierName": "createElement"
+                                         },
+                                         "name": "createElement"
+                                       },
+                                       "computed": false
+                                     },
+                                     "extra": {
+                                       "parenthesized": true,
+                                       "parenStart": 6
+                                     }
+                                   },
+                                   "extra": {
+                                     "parenthesizedArgument": false
+                                   }
+                                 },
+                                 "extra": {
+                                   "parenthesizedArgument": false
+                                 }
+                               },
 
 
 
-                     ,{
+                     {
                         "type": "BlockStatement",
                         "body": [
                             {
