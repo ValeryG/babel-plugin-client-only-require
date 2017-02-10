@@ -46,57 +46,45 @@ export default function transformAssets({types: t}) {
 
                     const from = resolveModulePath(file.opts.filename);
 
-                    const p = require(resolve(from, filePath));
                     console.log("HERE?", from, filePath);
-                    console.log("HERE?", p);
-                    const replaceString = `
-                        if !!(typeof window !== 'undefined' && window.document &&window.document.createElement) {
-                            var x = require("${filePath}");
-                        }
-          `;
 
-          //console.log(path.parentPath);
-          path.replaceWith(t.BlockStatement([{
-               "type": "IfStatement",
-               "test": {
-                   "type": "BinaryExpression",
-                   "left": {
-                       "type": "LiteralNumericExpression",
-                       "value": 1
-                   },
-                   "operator": "==",
-                   "right": {
-                       "type": "LiteralNumericExpression",
-                       "value": 2
-                   }
-                },
-                "consequent": {
-                    "type": "BlockStatement",
-                    "block": {
-                        "type": "Block",
-                        "statements": [
+                    path.replaceWith(t.IfStatement(
+                    {
+                        "type": "BinaryExpression",
+                        "left": {
+                            "type": "NumericLiteral",
+                            "value": 1
+                        },
+                        "operator": "==",
+                        "right": {
+                            "type": "NumericLiteral",
+                            "value": 1
+                         }
+                     },
+                     {
+                        "type": "BlockStatement",
+                        "body": [
                             {
                                 "type": "ExpressionStatement",
                                 "expression": {
                                     "type": "CallExpression",
                                     "callee": {
-                                        "type": "IdentifierExpression",
+                                        "type": "Identifier",
                                         "name": "require"
                                     },
                                     "arguments": [
                                         {
-                                            "type": "LiteralStringExpression",
-                                            "value": "./../../../../styles/myStyles.qqq"
+                                            "type": "StringLiteral",
+                                            "value": filePath+'qqq'
                                         }
                                     ]
                                 }
                             }
-                        ]
-                    }
-                },
-                "alternate": null
-             }
-         ]));
+                        ],
+                        "directives": []
+                     }
+                 ));
+
                 }
             }
         }
