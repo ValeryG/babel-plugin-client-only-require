@@ -50,6 +50,10 @@ With the appoach of wrapping require to client only condition - require is still
 
 
 ## How to configure
+Install as dev dependency:
+```
+npm install --save-dev babel-plugin-client-only-require
+```
 
 To configure add plugin to .babelrc plugins section:
 ```
@@ -57,7 +61,7 @@ To configure add plugin to .babelrc plugins section:
 	....
     "plugins": [
 		....
-		["@concur/babel-plugin-client-only-require", {
+		["client-only-require", {
                 "extensions": ["less", "scss", "css"]
         }]
     ]
