@@ -11,8 +11,6 @@ export default function transformAssets({types: t}) {
 
                 currentConfig.extensions = currentConfig.extensions || [];
 
-                require('asset-require-hook')(currentConfig);
-
                 const {
                     callee: {
                         name: calleeName
