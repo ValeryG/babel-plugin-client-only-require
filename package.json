@@ -1,25 +1,33 @@
 {
-  "name": "@concur/babel-plugin-client-only-require",
-  "version": "1.0.0",
-  "description": "wrap requires of certant extensions into client only condition",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "babel src --out-dir lib",
-    "test": "mocha --compilers js:babel-core/register 'test/**/*.spec.js'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.concur.com:nui/babel-plugin-client-only-require.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "asset-require-hook": "^1.0.2",
-    "babel-cli": "^6.22.2",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0",
-    "mock-fs": "^4.0.0"
-  }
+    "name": "babel-plugin-client-only-require",
+    "version": "1.0.0",
+    "description": "Babel plugin to transpile  require of certant extensions into client only conditionial require",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "babel src --out-dir lib",
+        "test": "mocha --compilers js:babel-core/register 'test/**/*.spec.js'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ValeryG/babel-plugin-client-only-require.git"
+    },
+    "author": "Val Gorodnichev",
+    "license": "ISC",
+    "devDependencies": {
+        "asset-require-hook": "^1.0.2",
+        "babel-cli": "^6.22.2",
+        "babel-preset-es2015": "^6.22.0",
+        "babel-preset-stage-0": "^6.22.0",
+        "chai": "^3.5.0",
+        "mocha": "^3.2.0",
+        "mock-fs": "^4.0.0"
+    },
+    "keywords": [
+        "babel-plugin",
+        "require",
+        "instrumentation",
+        "isomorphic",
+        "styles",
+        "client-only"
+    ]
 }
